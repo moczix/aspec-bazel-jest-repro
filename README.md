@@ -18,3 +18,8 @@ it doesnt see setup-jest.js, if we comment setupFilesAfterEnv, then we have erro
 because on src/testowy-module there is none.
 
 i tried to use copy_to_bin but it not worked
+
+# how to run
+
+1. `yarn`
+2. `yarn bazeltestify`
