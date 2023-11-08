@@ -1,0 +1,28 @@
+build --nolegacy_external_runfiles
+run --nolegacy_external_runfiles
+test --nolegacy_external_runfiles
+
+
+build --symlink_prefix=bazel/
+
+build --incompatible_strict_action_env
+run --incompatible_strict_action_env
+test --incompatible_strict_action_env
+test --enable_runfiles
+
+build --nobuild_runfile_links
+query --output=label_kind
+
+# build --remote_cache=https://storage.googleapis.com/bcf-bazel-remote-cache1
+# build --google_credentials=./bazel-remote-cache.json
+# build --remote_upload_local_results=false
+# test --remote_cache=https://storage.googleapis.com/bcf-bazel-remote-cache1
+# test --google_credentials=./bazel-remote-cache.json
+# test --remote_upload_local_results=false
+# run --remote_cache=https://storage.googleapis.com/bcf-bazel-remote-cache1
+# run --google_credentials=./bazel-remote-cache.json
+# run --remote_upload_local_results=false
+
+common --@aspect_rules_ts//ts:skipLibCheck=always
+
+try-import .bazelrc.user

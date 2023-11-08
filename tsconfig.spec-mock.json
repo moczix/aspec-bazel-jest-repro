@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": ["jest", "node"],
+    "importHelpers": false,
+    "typeRoots": ["node_modules/@types"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "paths": {}
+  },
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts", "global.d.ts"],
+  "exclude": ["**/dist/**/*.spec.js", "**/dist/**/*.spec.ts"]
+}
